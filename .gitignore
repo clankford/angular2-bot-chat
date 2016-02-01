@@ -2,3 +2,5 @@ npm-debug.log
 node_modules
 app.js
 app.js.map
+bootstrap.js
+bootstrap.js.map
