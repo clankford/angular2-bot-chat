@@ -1,4 +1,4 @@
-import { Injectable } from 'angular2/core';
+import { Injectable, bind } from 'angular2/core';
 import { Subject, BehaviorSubject } from 'rxjs';
 import { User } from '../models/user';
 
@@ -10,3 +10,7 @@ export class UserService {
     this.currentUser.next(newUser);
   }
 }
+
+export var userServiceInjectables: Array<any> = [
+  bind(UserService).toClass(UserService)
+];
