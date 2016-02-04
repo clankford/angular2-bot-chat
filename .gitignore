@@ -14,3 +14,5 @@ message.js
 message.js.map
 UserService.js
 UserService.js.map
+MessageService.js
+MessageService.js.map
