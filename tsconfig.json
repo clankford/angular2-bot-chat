@@ -1,15 +1,32 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    "module": "system",
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "module": "commonjs",
+    "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false
+    "noEmitHelpers": false,
+    "sourceMap": true
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "files": [
+    "./app/app.ts",
+    "./app/bootstrap.ts",
+    "./app/models/message.ts",
+    "./app/models/thread.ts",
+    "./app/models/user.ts",
+    "./app/services/MessageService.ts",
+    "./app/services/UserService.ts",
+    "./app/util/uuid.ts",
+    "./test/services/MessageService.spec.ts"
+  ],
+  "filesGlob": [
+    "./app/**/*.ts",
+    "./test/**/*.ts",
+    "!./node_modules/**/*.ts"
+  ],
+  "compileOnSave": true,
+  "buildOnSave": true,
+  "atom": {
+    "rewriteTsconfig": true
+  }
 }

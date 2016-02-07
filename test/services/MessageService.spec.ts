@@ -1,7 +1,7 @@
-import { User } from '../../models/user';
-import { Thread } from '../../models/thread';
-import { Message } from '../../models/message';
-import { MessageService } from '../../services/MessageService';
+import { User } from '../../app/models/user';
+import { Thread } from '../../app/models/thread';
+import { Message } from '../../app/models/message';
+import { MessageService } from '../../app/services/MessageService';
 
 describe('MessageService', () => {
   it('should test', () => {
