@@ -47,20 +47,20 @@ export class MessageService {
 
     this.newMessages
       .subscribe(this.create);
-  }
 
-  this.markThreadAsRead
-    .map( (thread: Thread) => {
-      return (messages: Message[]) => {
-        return messages.map( (message: Message) => {
-          if (message.thread.id === thread.id) {
-            message.isRead = true;
-          }
-          return message;
-        });
-      };
-    })
-    .subscribe(this.updates);
+    this.markThreadAsRead
+      .map( (thread: Thread) => {
+        return (messages: Message[]) => {
+          return messages.map( (message: Message) => {
+            if (message.thread.id === thread.id) {
+              message.isRead = true;
+            }
+            return message;
+          });
+        };
+      })
+      .subscribe(this.updates);
+  }
 
   addMessage(message: Message): void {
     this.newMessages.next(message);
@@ -78,5 +78,5 @@ export class MessageService {
 }
 
 export var messagesServicesInjectables: Array<any> = [
-  bind(MessageService).toClass(MessagesService)
+  bind(MessageService).toClass(MessageService)
 ];
