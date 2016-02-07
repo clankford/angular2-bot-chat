@@ -24,7 +24,7 @@ var reloadHost = "0.0.0.0";
 var npmRoot = __dirname + "/node_modules";
 var appDir = __dirname + "/app";
 
-var entry = ["./app/ts/app.ts"]
+var entry = ["./app/app.ts"]
 
 if (isDevServer) {
   entry.unshift("webpack-dev-server/client?http://"+reloadHost+":8080");
@@ -40,7 +40,7 @@ function makeConfig(options) {
     displayChunks: true,
     context: __dirname,
     entry: {
-      vendor: './app/ts/vendor.ts',
+      vendor: './app/vendor.ts',
       app: entry,
     },
     stats: {

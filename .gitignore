@@ -18,3 +18,5 @@ MessageService.js
 MessageService.js.map
 MessageService.spec.js
 MessageService.spec.js.map
+vendor.js
+vendor.js.map
