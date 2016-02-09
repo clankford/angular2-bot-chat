@@ -20,3 +20,5 @@ MessageService.spec.js
 MessageService.spec.js.map
 vendor.js
 vendor.js.map
+ThreadService.js
+ThreadService.js.map
