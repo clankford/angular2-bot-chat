@@ -18,7 +18,8 @@
     "./app/services/UserService.ts",
     "./app/util/uuid.ts",
     "./app/vendor.ts",
-    "./test/services/MessageService.spec.ts"
+    "./test/services/MessageService.spec.ts",
+    "./test/services/ThreadService.spec.ts"
   ],
   "filesGlob": [
     "./app/**/*.ts",

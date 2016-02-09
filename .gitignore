@@ -22,3 +22,5 @@ vendor.js
 vendor.js.map
 ThreadService.js
 ThreadService.js.map
+ThreadService.spec.js
+ThreadService.spec.js.map
