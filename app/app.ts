@@ -16,7 +16,7 @@ require('./css/styles.scss');
 })
 export class App {
   constructor() {
-    console.log('Chat client coming soon!');
+    console.log('Chat client coming soon!!');
   }
 }
 
