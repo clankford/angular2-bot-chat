@@ -19,12 +19,16 @@
     "./app/util/uuid.ts",
     "./app/vendor.ts",
     "./test/services/MessageService.spec.ts",
-    "./test/services/ThreadService.spec.ts"
+    "./test/services/ThreadService.spec.ts",
+    "./typings/tsd.d.ts",
+    "./typings/underscore/underscore.d.ts"
   ],
   "filesGlob": [
     "./app/**/*.ts",
     "./test/**/*.ts",
-    "!./node_modules/**/*.ts"
+    "!./node_modules/**/*.ts",
+    "./typings/tsd.d.ts",
+    "./typings/**/*.d.ts"
   ],
   "compileOnSave": true,
   "buildOnSave": true,
