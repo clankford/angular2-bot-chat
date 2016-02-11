@@ -7,7 +7,8 @@ import * as _ from 'underscore';
 
 @Injectable()
 export class ThreadService {
-  // 'threads' is an observable that contains the most up to date list of threads
+  // 'threads' is an observable that contains the most up to date list
+  // of threads
   threads: Observable<{ [key: string]: Thread }>;
   // 'orderedThreads' contains a newest-first chronological list of threads
   orderedThreads: Observable<Thread[]>;
@@ -45,7 +46,7 @@ export class ThreadService {
 
     this.currentThreadMessages = this.currentThread
       .combineLatest(messageService.messages,
-                    (currentThread: Thread, messages: Message[]) => {
+                     (currentThread: Thread, messages: Message[]) => {
         if (currentThread && messages.length > 0) {
           return _.chain(messages)
             .filter((message: Message) =>
@@ -59,7 +60,7 @@ export class ThreadService {
         }
       });
 
-      this.currentThread.subscribe(this.messageService.markThreadAsRead);
+    this.currentThread.subscribe(this.messageService.markThreadAsRead);
   }
 
   setCurrentThread(newThread: Thread): void {

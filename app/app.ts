@@ -32,8 +32,8 @@ export class App {
   constructor(public messageService: MessageService,
               public threadService: ThreadService,
               public userService: UserService) {
-    console.log('Chat app coming soon!!!')
-    //ChatExampleData.init(messageService, threadService, userService);
+    console.log('Chat app coming soon!!!');
+    // ChatExampleData.init(messageService, threadService, userService);
   }
 }
 
