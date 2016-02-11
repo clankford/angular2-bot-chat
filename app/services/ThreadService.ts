@@ -6,7 +6,7 @@ import { MessageService } from './MessageService';
 import * as _ from 'underscore';
 
 @Injectable()
-export class ThreadSevice {
+export class ThreadService {
   // 'threads' is an observable that contains the most up to date list of threads
   threads: Observable<{ [key: string]: Thread }>;
 
@@ -31,3 +31,7 @@ export class ThreadSevice {
       });
   }
 }
+
+export var threadServiceInjectibles: Array<any> = [
+  bind(ThreadService).toClass(ThreadService)
+];
