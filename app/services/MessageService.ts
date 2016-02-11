@@ -77,6 +77,6 @@ export class MessageService {
   }
 }
 
-export var messagesServicesInjectables: Array<any> = [
+export var messageServiceInjectables: Array<any> = [
   bind(MessageService).toClass(MessageService)
 ];

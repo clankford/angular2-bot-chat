@@ -24,3 +24,11 @@ ThreadService.js
 ThreadService.js.map
 ThreadService.spec.js
 ThreadService.spec.js.map
+services.js
+services.js.map
+ChatNavBar.js
+ChatNavBar.js.map
+ChatThreads.js
+ChatThreads.js.map
+ChatWindow.js
+ChatWindow.js.map
