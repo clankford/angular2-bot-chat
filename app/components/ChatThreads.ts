@@ -12,10 +12,10 @@ import { ChatThread } from './ChatThread';
     <div class="row">
       <div class="conversation-wrap">
 
-        <chat-threads
+        <chat-thread
             *ngFor="#thread of threads | async"
             [thread]="thread">
-        </chat-thred>
+        </chat-thread>
 
       </div>
     </div>
