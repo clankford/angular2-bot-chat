@@ -1,11 +1,24 @@
-import { Component } from 'angular2/core';
+import { Component, ChangeDetectionStrategy } from 'angular2/core';
 import { Observable } from 'rxjs';
 import { ThreadService } from '../services/ThreadService';
+import { ChatThread } from './ChatThread';
 
 @Component({
   selector: 'chat-threads',
+  directives: [ChatThread],
+  changeDetection: ChangeDetectionStrategy.OnPushObserve,
   template: `
-    chat-threads component
+    <!-- conversations -->
+    <div class="row">
+      <div class="conversation-wrap">
+
+        <chat-threads
+            *ngFor="#thread of threads | async"
+            [thread]="thread">
+        </chat-thred>
+
+      </div>
+    </div>
   `
 })
 export class ChatThreads {
