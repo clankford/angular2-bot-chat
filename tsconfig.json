@@ -10,6 +10,7 @@
   },
   "files": [
     "./app/app.ts",
+    "./app/components/ChatMessage.ts",
     "./app/components/ChatNavBar.ts",
     "./app/components/ChatThread.ts",
     "./app/components/ChatThreads.ts",
