@@ -1,6 +1,6 @@
-import { uuid } from "../util/uuid";
-import { User } from "./user";
-import { Thread } from "./thread";
+import { uuid } from '../util/uuid';
+import { User } from './user';
+import { Thread } from './thread';
 
 export class Message {
   id: string;

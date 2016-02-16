@@ -6,6 +6,6 @@ import { Component } from 'angular2/core';
     chat-message template
   `
 })
-export class ChatMessage{
+export class ChatMessage {
 
 }
