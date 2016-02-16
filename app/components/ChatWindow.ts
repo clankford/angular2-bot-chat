@@ -48,5 +48,32 @@ export class ChatWindow implements OnInit {
       (user: User) => {
         this.currentUser = user;
       });
+
+    this.messages.subscribe(
+      (messages: Array<Message>) => {
+        setTimeout(() => {
+          this.scrollToBottom();
+        });
+      });
+  }
+
+  sendMessage(): void {
+    let m: Message = this.draftMessage;
+    m.author = this.currentUser;
+    m.thread = this.currentThread;
+    m.isRead = true;
+    this.messageService.addMessage(m);
+    this.draftMessage = new Message();
+  }
+
+  onEnter(event: any): void {
+    this.sendMessage();
+    event.preventDefault();
+  }
+
+  scrollToBottom(): void {
+    let scrollPane: any = this.el
+      .nativeElement.querySelector('.msg-container-base');
+    scrollPane.scrollTop = scrollPane.scrollHeight;
   }
 }
