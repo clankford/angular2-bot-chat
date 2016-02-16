@@ -19,7 +19,50 @@ import { UserService } from '../services/UserService';
                FORM_DIRECTIVES],
   changeDetection: ChangeDetectionStrategy.OnPushObserve,
   template: `
-    chat-window component
+    <div class="chat-window-container">
+      <div class="chat-window">
+        <div class="panel-container">
+          <div class="panel panel-default">
+
+            <div class="panel-heading top-bar">
+              <div class="panel-title-container">
+                <h3 class="panel-title">
+                  <span class="glyphicon glyphicon-comment"></span>
+                  Chat - {{currentThread.name}}
+                </h3>
+              </div>
+              <div class="panel-buttons-container">
+                <!-- you could minimize or close buttons here -->
+              </div>
+            </div>
+
+            <div class="panel-body msg-container-base">
+              <chat-message
+                *ngFor="#message of messages | async"
+                [message]="message">
+              </chat-message>
+            </div>
+
+            <div class="panel-footer">
+              <div class="input-group">
+                <input type="text"
+                       class="chat-input"
+                       placeholder="Write your message here..."
+                       (keydown.enter)="onEnter($event)"
+                       [(ngModel)]="draftMessage.text" />
+                <span class="input-group-btn">
+                  <button class="btn-chat"
+                    (click)="onEnter($event)">
+                    Send
+                  </button>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   `
 })
 export class ChatWindow implements OnInit {
