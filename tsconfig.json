@@ -22,11 +22,14 @@
     "./app/services/services.ts",
     "./app/services/ThreadService.ts",
     "./app/services/UserService.ts",
+    "./app/util/FromNowPipe.ts",
     "./app/util/uuid.ts",
     "./app/vendor.ts",
     "./test/services/MessageService.spec.ts",
     "./test/services/ThreadService.spec.ts",
     "./typings/tsd.d.ts",
+    "./typings/moment/moment-node.d.ts",
+    "./typings/moment/moment.d.ts",
     "./typings/underscore/underscore.d.ts"
   ],
   "filesGlob": [
