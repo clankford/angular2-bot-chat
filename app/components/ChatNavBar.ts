@@ -8,7 +8,21 @@ import * as _ from 'underscore';
 @Component({
   selector: 'nav-bar',
   template: `
-    nav-bar component
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="https://www.arsenal.com">
+            <img src="${require('images/logos/gunner.png')}"/>
+            Bot Chat
+          </a>
+        </div>
+        <p class="navbar-text navbar-right">
+          <button class="btn btn-primary" type="button">
+            Messages <span class="badge">{{unreadMessagesCount}}</span>
+          </button>
+        </p>
+      </div>
+    </nav>
   `
 })
 export class ChatNavBar {
@@ -33,12 +47,12 @@ export class ChatNavBar {
               let messageIsInCurrentThread: boolean = m.thread &&
                 currentThread &&
                 (currentThread.id === m.thread.id);
-                if (m && !m.isRead && !messageIsInCurrentThread) {
+              if (m && !m.isRead && !messageIsInCurrentThread) {
                   sum = sum + 1;
-                }
-                return sum;
+              }
+              return sum;
               },
-              0);
+            0);
       });
   }
 }
