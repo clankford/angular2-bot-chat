@@ -10,6 +10,7 @@
   },
   "files": [
     "./app/app.ts",
+    "./app/ChatExampleData.ts",
     "./app/components/ChatMessage.ts",
     "./app/components/ChatNavBar.ts",
     "./app/components/ChatThread.ts",
@@ -23,6 +24,7 @@
     "./app/services/ThreadService.ts",
     "./app/services/UserService.ts",
     "./app/util/FromNowPipe.ts",
+    "./app/util/util.ts",
     "./app/util/uuid.ts",
     "./app/vendor.ts",
     "./test/services/MessageService.spec.ts",

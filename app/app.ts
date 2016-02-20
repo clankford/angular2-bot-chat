@@ -7,6 +7,8 @@ import { MessageService } from './services/MessageService';
 import { ThreadService } from './services/ThreadService';
 import { UserService } from './services/UserService';
 import { servicesInjectables } from './services/services';
+import { utilInjectables } from './util/util';
+import { ChatExampleData } from './ChatExampleData';
 
 /*
  * Webpack
@@ -32,9 +34,8 @@ export class App {
   constructor(public messageService: MessageService,
               public threadService: ThreadService,
               public userService: UserService) {
-    console.log('Chat app coming soon!!!');
-    // ChatExampleData.init(messageService, threadService, userService);
+    ChatExampleData.init(messageService, threadService, userService);
   }
 }
 
-bootstrap(App, [ servicesInjectables ]);
+bootstrap(App, [ servicesInjectables, utilInjectables ]);
