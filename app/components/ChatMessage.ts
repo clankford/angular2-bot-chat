@@ -13,7 +13,7 @@ import { UserService } from '../services/UserService';
          [ngClass]="{'base-sent': !incoming, 'base-receive': incoming}">
       <div class="avatar"
            *ngIf="!incoming">
-        <img src="{{messsage.author.avatarsrc}}">
+        <img src="{{message.author.avatarSrc}}">
       </div>
 
       <div class="messages"
